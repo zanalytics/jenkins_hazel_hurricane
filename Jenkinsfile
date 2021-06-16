@@ -23,7 +23,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            slackSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+            slackSend "Build Started - Hazel Hurricane is finished"
         }
         failure {
             echo 'This will run only if failed'
