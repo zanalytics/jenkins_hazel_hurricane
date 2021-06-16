@@ -23,7 +23,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            echo 'This will run only if successful'
+            slackSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }
         failure {
             echo 'This will run only if failed'
