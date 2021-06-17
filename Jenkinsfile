@@ -28,6 +28,7 @@ pipeline {
         }
         failure {
             echo 'This will run only if failed'
+            slackSend color: '#BADA55', message: 'Hazel Hurricane has failed!!!'
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
