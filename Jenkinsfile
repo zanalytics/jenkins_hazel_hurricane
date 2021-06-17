@@ -24,7 +24,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            slackSend color: '#BADA55', message: 'Hazel Hurricane is finished!!! - Say Hi Nikos'
+            slackSend color: '#BADA55', message: 'Hazel Hurricane is finished!!! - Say Hi John'
         }
         failure {
             echo 'This will run only if failed'
