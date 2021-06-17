@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
+                slackSend color: '#BADA55', message: 'Hazel Hurricane is Started!!!'
             }
         }
         stage('Test') {
@@ -23,7 +24,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            slackSend "Build Started - Hazel Hurricane is finished"
+            slackSend color: '#BADA55', message: 'Hazel Hurricane is finished!!!'
         }
         failure {
             echo 'This will run only if failed'
